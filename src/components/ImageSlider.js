@@ -28,17 +28,15 @@ const ImageSlider = ({ slides }) => {
             className={index === current ? 'slide active' : 'slide'}
             key={index}
           >
-            {index === current && (
-              <>
-                <img src={slide.image} alt='travel image' className='image' />
-                <div className="container">
-                  <h1 className='caption'>{slide.title}</h1>
-                  <p>{slide.subtitle}</p>
-                  <a className='button-slider'>SAIBA MAIS</a>
-                </div>
-              </>
+            <div style={index !== current ? {display: 'none'} : {}}>
+              <img src={slide.image} alt='travel image' className='image' />
+              <div className="container">
+                <h1 className='caption'>{slide.title}</h1>
+                <p>{slide.subtitle}</p>
+                <a className='button-slider'>SAIBA MAIS</a>
+              </div>
+            </div>
 
-            )}
           </div>
         );
       })}

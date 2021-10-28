@@ -1,10 +1,11 @@
 .container {
   display: flex;
   flex-direction: column;
-  position: absolute;
   max-width: 1200px;
-  top: 0;
-  left: 180px;
+  position: absolute;
+  top: 50%;
+  left: 300px;
+  transform: translate(0,-50%);
 }
 
 .slider {
@@ -38,16 +39,12 @@
   user-select: none;
 }
 
-
 h1 {
-  padding-top: 200px;
   width: 85%;
   font-style: normal;
   font-weight: bold;
   font-size: 50px;
   color: #FFFFFF;
-
-
 }
 
 p {
@@ -72,44 +69,28 @@ p {
   cursor: pointer;
 }
 
-@media (max-width: 900px)
+@media (max-width: 500px)
 {
 
-  .container {
-    left: 15%;
+  .container{
+    left: 60px;
   }
 
   h1 {
-    padding-top: 5%;
-    font-size: 25px;
+    font-size: 18px;
   }
 
   p {
-    padding-top: 5px;
     font-size: 10px;
-    color: #FFFFFF;
   }
 
   .right-arrow {
-    position: absolute;
-    top: 50%;
     right: 10px;
-    font-size: 3rem;
-    color: #000;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
   }
 
   .left-arrow {
-    position: absolute;
-    top: 50%;
     left: 10px;
-    font-size: 3rem;
-    color: #000;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
   }
+
 
 }
